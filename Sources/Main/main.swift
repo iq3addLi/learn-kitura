@@ -1,0 +1,2 @@
+// Application Launch
+Application().launch()
