@@ -6,6 +6,7 @@
 //
 
 import Kitura
+import Logging
 
 class Application{
     
@@ -14,6 +15,11 @@ class Application{
     }()
     
     init(){
+        // Set Loglevel
+        var logger = Logger(label: "MyLogger")
+        logger.logLevel = .trace
+        Kitura.logTo(logger)
+        
         // Test
         router.get("/hello") { request, response, next in
             response.send("Hello world!")

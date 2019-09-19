@@ -1,2 +1,1 @@
-// Application Launch
 Application().launch()
